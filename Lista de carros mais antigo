@@ -1,0 +1,37 @@
+programa
+{
+	funcao inicio()
+	{
+		// Valor lógico usado como marcador inicial
+		logico primeiroVeiculoInserido = verdadeiro
+		inteiro ano = 0
+		cadeia marca = ""
+		cadeia marcaAntiga = ""
+		inteiro anoAntigo = 0
+
+
+		faca{
+			escreva("Insira o veículo: ")
+			leia(marca)
+
+			se(marca != "stop"){
+				escreva("Insira o ano de " + marca + ": ")
+				leia(ano)
+				// Se for a primeira leitura insere os primeiros dados
+				se(primeiroVeiculoInserido == verdadeiro){
+					anoAntigo = ano
+					marcaAntiga = marca
+					primeiroVeiculoInserido = falso // passar o marcador para falso
+				}senao{
+					se(ano < anoAntigo)
+					{
+						anoAntigo = ano
+						marcaAntiga = marca
+					}
+				}								
+			}			
+		}enquanto(marca != "stop")
+		
+		escreva("\nO carro mais antigo é o "+ marcaAntiga+ ", do ano de "+ anoAntigo + ".")
+	}
+}
