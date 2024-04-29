@@ -1,0 +1,40 @@
+ /*
+Criar um algoritmo que escreva uma escada descendente com "#", em função de um dado número.
+Exemplo: Para o número 5 escrever - #
+                                                             ##
+                                                             ###
+                                                             ####
+                                                             #####
+
+Atender ao seguinte:
+   1 - O valor do algarismo será introduzido pelo utilizador
+   2 - O número deve estar entre 1 e 8
+   3 - Informar o utilizador se o número não estiver dentro do intervalo e repetir a leitura.
+ */
+
+programa
+{	
+	funcao inicio()
+	{
+		inteiro degraus
+
+		// Ciclo para repetir o pedido ao utilizador, se o número não estiver dentro do intervalo
+		faca{
+			escreva("Digite o número de degraus, entre 1 e 8: ")
+			leia(degraus)
+			
+		}enquanto(degraus <= 0 ou degraus > 8)
+
+		// Ciclo para repetir procedimento tantas vezes quantos os degraus indicados
+		para(inteiro i = 1; i <= degraus; i++){
+
+			//Ciclo para criar os "#" da escada descendente
+			para(inteiro x = 1; x <= i; x++){
+				escreva("#")
+			}
+
+			// Muda de linha
+			escreva("\n")
+		}
+	}
+}
