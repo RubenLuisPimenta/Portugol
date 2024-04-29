@@ -1,0 +1,26 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro ano = 0
+		cadeia marca = ""
+		cadeia marcaRecente = ""
+		inteiro anoRecente = 0
+		faca{
+			escreva("Insira o veículo: ")
+			leia(marca)
+
+			se(marca != "stop"){
+				escreva("Insira o ano de " + marca + ": ")
+				leia(ano)
+				se(ano > anoRecente)
+				{
+					anoRecente = ano
+					marcaRecente = marca
+				}											
+			}			
+		}enquanto(marca != "stop")
+		
+		escreva("\nO carro mais recente é o "+ marcaRecente+ ", do ano de "+ anoRecente + ".\n")
+	}
+}
