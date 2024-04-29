@@ -1,0 +1,31 @@
+/*
+Criar um algoritmo que escreva todos os números correspondentes ao algarismo inserido.
+Exemplo, para o algarismo inserido (5), escrever 1-2-3-4-5
+
+Atender ao seguinte:
+   1 - O valor do algarismo será introduzido pelo utilizador
+   2 - Impedir que no fim da escrita da série de números exista um hífen (exemplo: 1-2-3-4-5-)
+*/
+
+programa
+{	
+	funcao inicio()
+	{
+		inteiro numInserido 
+		escreva("Escreva um número inteiro positivo até 12: ")
+		leia(numInserido)
+
+		// Ciclo "para" escrever sequêncialmente os números 
+		para (inteiro i = 1; i <= numInserido; i++)
+		{			
+		    	escreva(i)
+
+			// contador para escrever o hifen em todos os números menos no último
+			inteiro contador = i+1
+			se (contador <= numInserido)
+			{
+				escreva("-")				    
+			}
+		}
+	}
+}
