@@ -1,0 +1,57 @@
+programa{
+
+  /* 
+  * Criando uma função com parâmetro.
+  * 
+  * Escrito por Wagner Gaspar
+  * Março de 2021
+  * 
+  * https://wagnergaspar.com/como-criar-uma-funcao-que-recebe-parametros-em-portugol/
+  */
+  
+  funcao inicio(){
+  	
+  	inteiro idade = lerIdade()
+  	caracter genero = lerGenero()
+
+	se(alistamento(idade, genero)){
+		escreva("\nAlistamento obrigatório")
+	}senao{
+		escreva("\nDispensado do alistamento")
+	}  	     
+  }
+
+  funcao inteiro lerIdade(){
+  	inteiro idade
+  	escreva("\nDigite a sua idade: ")
+  	leia(idade)
+  	retorne idade  	
+  }
+
+  funcao caracter lerGenero(){
+	caracter genero
+  	escreva("\nDigite o seu género (f para Feminino e m para Masculino): ")
+  	leia(genero)
+  	retorne genero
+  }
+
+  funcao logico alistamento(inteiro i, caracter g){
+  	se(g=='m' e i==18){
+  		retorne verdadeiro
+  	}senao{
+  		retorne falso
+  	}  	
+  }
+    
+}
+/* $$$ Portugol Studio $$$ 
+ * 
+ * Esta seção do arquivo guarda informações do Portugol Studio.
+ * Você pode apagá-la se estiver utilizando outro editor.
+ * 
+ * @POSICAO-CURSOR = 324; 
+ * @PONTOS-DE-PARADA = ;
+ * @SIMBOLOS-INSPECIONADOS = {idade, 14, 11, 5}-{genero, 15, 12, 6};
+ * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
+ * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
+ */
