@@ -1,0 +1,39 @@
+programa
+{
+	cadeia nomeAluno, nomeUC, nomeUcMax =""
+	inteiro notaUC, media=0, soma=0, contador=0, notaUCMax=0
+	cadeia notaExtenso[]={"Zero", "Um", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito",
+					  "Nove", "Dez"}
+	funcao inicio()
+	{
+		escreva("Insira o nome do Aluno: ")
+		leia(nomeAluno)
+
+		faca{
+			escreva("Insira o nome da UC: ")
+			leia(nomeUC)
+
+			se(nomeUC!="stop"){
+				escreva("Insira a nota da UC: ")
+				leia(notaUC)
+
+				//soma = soma + notaUC
+				soma += notaUC
+				//contador = contador + 1
+				contador++
+
+				se(notaUC > notaUCMax){
+					notaUCMax = notaUC
+					nomeUcMax = nomeUC
+				}
+			}			
+		}enquanto(nomeUC != "stop")
+
+		media=soma/contador
+
+		escreva(" A melhor nota do aluno: ", nomeAluno,
+			   " é a de ", nomeUcMax, ". Com uma média de ",
+			   notaExtenso[media], " valores.")		
+		
+	}
+}
