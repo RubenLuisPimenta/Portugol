@@ -1,0 +1,27 @@
+/*
+Criar um algoritmo que calcule a àrea de um Circulo.
+
+Atender ao seguinte:
+   1- O raio terá um valor entre 1 e 10 (o número a usar no cálculo, será introduzido pelo utilizador). 
+   2 - Dados:
+		fórmula -> àrea = pi * raio ao quadrado
+		pi -> 3,141549
+		raio -> valor dado pelo utilizador
+*/
+
+programa
+{
+    funcao inicio()
+	{
+		real area
+		real raio
+
+		const real pi = 3.14159
+		
+		leia (raio)
+		
+		area= pi*(raio*raio)
+		
+		escreva(area)		
+	}
+}
