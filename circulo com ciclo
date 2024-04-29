@@ -1,0 +1,32 @@
+/*
+Criar um algoritmo que calcule a àrea de um Circulo.
+
+Atender ao seguinte:
+   1 - O raio terá um valor entre 1 e 10 (o número a usar no cálculo, será introduzido pelo utilizador). 
+   2 - Deverá existir um mecanismo que informe o utilizador se o valor inserido não estiver no intervalo.
+   3 - Dados:
+		fórmula -> àrea = pi * raio ao quadrado
+		pi -> 3,141549
+		raio -> valor dado pelo utilizador
+*/
+
+programa
+{
+    funcao inicio()
+	{
+		real area
+		real raio
+		const real pi = 3.14159
+
+		// Ciclo para continuar a pedir um número enquanto não for entre 1 e 10
+		faca{
+			escreva("Insira um número inteiro entre 1 e 10 para o raio: ")
+			leia (raio)
+			
+		}enquanto(raio < 1 ou raio > 10)
+		
+		area= pi*(raio*raio)
+		
+		escreva("A área é de: ", area)		
+	}
+}
